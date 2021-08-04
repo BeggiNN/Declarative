@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Perspective\Schema\Api\Data\PostInterface"
+                type="Perspective\Schema\Model\Post"/>
+
+    <preference for="Perspective\Schema\Api\PostRepositoryInterface"
+                type="Perspective\Schema\Model\PostRepository"/>
+
+    <preference for="Perspective\Schema\Api\Data\PostSearchResultInterface"
+                type="Magento\Framework\Api\SearchResults" />
+
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="deploy_sample_data"
+                      xsi:type="object">Perspective\Schema\Console\Command\DeploySampleDataCommand</item>
+                <item name="remove_sample_data"
+                      xsi:type="object">Perspective\Schema\Console\Command\RemoveSampleDataCommand</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

@@ -1,0 +1,15 @@
+{
+    "perspective_schema_sc_table": {
+        "column": {
+            "id": true,
+            "name": true,
+            "job": true,
+            "summary": true,
+            "time": true,
+            "active": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
